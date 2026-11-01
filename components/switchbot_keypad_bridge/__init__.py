@@ -311,7 +311,7 @@ async def to_code(config):
     # Silence the NimBLE logger to keep heap and serial noise to a minimum.
     add_idf_sdkconfig_option("CONFIG_NIMBLE_CPP_LOG_LEVEL", 4)
     add_idf_sdkconfig_option("CONFIG_BT_NIMBLE_LOG_LEVEL", 4)
-    #add_idf_sdkconfig_option("CONFIG_BT_NIMBLE_LOG_LEVEL_NONE", True)
+    add_idf_sdkconfig_option("CONFIG_BT_NIMBLE_LOG_LEVEL_NONE", False)
     add_idf_sdkconfig_option("CONFIG_BT_HCI_LOG_DEBUG_EN", True)
 
     # The cloud client calls https://*.switchbot.net — pull in mbedTLS's
